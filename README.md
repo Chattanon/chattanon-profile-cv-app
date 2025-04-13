@@ -1,5 +1,5 @@
-(path/to/สกรีนช็อต 2025-04-13 183045.png)
-(path/to/สกรีนช็อต 2025-04-13 183113.png)
-(path/to/สกรีนช็อต 2025-04-13 183128.png)
-(path/to/สกรีนช็อต 2025-04-13 183140.pngg)
+src/assets/readmeimg/screenshot_20250413_183045.png
+src/assets/readmeimg/screenshot_20250413_183113.png
+src/assets/readmeimg/screenshot_20250413_183128.png
+src/assets/readmeimg/screenshot_20250413_183140.png
 
