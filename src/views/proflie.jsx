@@ -860,7 +860,7 @@ function Profile() {
               Say hello at{" "}
               <Box
                 component="a"
-                href="mailto:chanintornc@sau.ac.th"
+                href="mailto:chattanon.a02@gmail.com"
                 sx={{
                   color: "#c9e265",
                   textDecoration: "none",
