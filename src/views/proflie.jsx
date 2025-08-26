@@ -186,6 +186,12 @@ function Profile() {
                   backgroundColor: "#d9f568",
                 },
               }}
+              onClick={() => {
+                document.getElementById("contact").scrollIntoView({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
             >
               CONTACT ME
               <Box
@@ -201,24 +207,10 @@ function Profile() {
             </Button>
 
             <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222222",
-                borderRadius: "50%",
-                width: 50,
-                height: 50,
-                "&:hover": {
-                  backgroundColor: "#333333",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              <LinkedInIcon sx={{ color: "#FFF" }} />
-            </Box>
-
-            <Box
+              component="a"
+              href="https://github.com/Chattanon"
+              target="_blank"
+              rel="noopener noreferrer"
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -860,7 +852,8 @@ function Profile() {
               Say hello at{" "}
               <Box
                 component="a"
-                href="mailto:chattanon.a02@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&to=chattanon.a02@gmail.com"
+                target="_blank"
                 sx={{
                   color: "#c9e265",
                   textDecoration: "none",
@@ -910,6 +903,7 @@ function Profile() {
               <Box
                 component="a"
                 href="https://github.com/Chattanon"
+                target="_blank"
                 sx={{
                   display: "flex",
                   justifyContent: "center",
@@ -989,8 +983,6 @@ function Profile() {
               © 2025 Chattanon Amprasort
             </Typography>
           </Box>
-
-         
         </Box>
       </Box>
     </Box>
