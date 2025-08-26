@@ -869,7 +869,7 @@ function Profile() {
                   },
                 }}
               >
-                s641941039@sau.ac.th
+                chattanon.a02@gmail.com
               </Box>
             </Typography>
 
