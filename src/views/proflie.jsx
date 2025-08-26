@@ -14,8 +14,11 @@ import FalaFew from "../assets/A1FC69FC-98F1-4068-853E-5BD0D0B62BFD (1).jpg";
 import AboutMePhoto from "../assets/WDJ_0442.jpg";
 import AboutMePhoto1 from "../assets/OHM00246_Original.jpg";
 import AboutMePhoto2 from "../assets/IMG_1635.jpg";
-import XIcon from '@mui/icons-material/X';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import ScrollToTop from "./ScrollToTop";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLine } from "@fortawesome/free-brands-svg-icons";
 function Profile() {
   return (
     <Box
@@ -24,6 +27,7 @@ function Profile() {
         minHeight: "100vh",
       }}
     >
+      <ScrollToTop />
       {/* AppBar */}
       <AppBar
         position="static"
@@ -50,6 +54,12 @@ function Profile() {
                 backgroundColor: "rgba(255,255,255,0.1)",
               },
             }}
+            onClick={() => {
+              document.getElementById("capabilities").scrollIntoView({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
           >
             Work
           </Button>
@@ -62,6 +72,12 @@ function Profile() {
                 backgroundColor: "rgba(255,255,255,0.1)",
               },
             }}
+            onClick={() => {
+              document.getElementById("about-me").scrollIntoView({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
           >
             About
           </Button>
@@ -73,6 +89,12 @@ function Profile() {
                 opacity: 0.8,
                 backgroundColor: "rgba(255,255,255,0.1)",
               },
+            }}
+            onClick={() => {
+              document.getElementById("contact").scrollIntoView({
+                top: 0,
+                behavior: "smooth",
+              });
             }}
           >
             Contact
@@ -137,7 +159,9 @@ function Profile() {
               maxWidth: "600px",
             }}
           >
-            นักพัฒนาและนักออกแบบเว็บที่พร้อมสร้างความสวยงามและการเรียนรู้สิ่งใหม่ๆ
+            ผมเป็นนักพัฒนาและนักออกแบบที่ชื่นชอบการสร้างสรรค์สิ่งใหม่ ๆ
+            โดยเฉพาะการนำเทคโนโลยี AI มาประยุกต์ใช้ให้เกิดประโยชน์
+            พร้อมเรียนรู้ท้าทายกับสิ่งใหม่ๆและพัฒนาทักษะอย่างต่อเนื่อง{" "}
           </Typography>
 
           {/* Contact Button and Social Icons */}
@@ -232,6 +256,7 @@ function Profile() {
       <Divider sx={{ backgroundColor: "#444", my: 3 }} />
       {/* About Me Section - Modified to center content */}
       <Box
+        id="about-me"
         sx={{
           px: { xs: 2, sm: 4, md: 8, lg: 16 },
           py: { xs: 6, md: 10 },
@@ -273,8 +298,10 @@ function Profile() {
               lineHeight: 1.7,
             }}
           >
-            ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่จบใหม่แต่เต็มไปด้วยไฟแรงกล้าที่จะสร้างสรรค์ผลงานอันน่าทึ่ง
-            และกำลังมองหาโอกาสที่น่าตื่นเต้นในการทำงานที่พื้นฐานการศึกษาด้านวิศวกรรมซอฟต์แวร์
+            ผมเป็นนักพัฒนาที่สนใจ AI Engineer จบด้านวิศวกรรมคอมพิวเตอร์
+            มีความสนใจและทักษะด้าน ปัญญาประดิษฐ์, Machine Learning, และ Computer
+            Vision ผมเคยทำโปรเจคจบเกี่ยวกับ ระบบบริหารลานจอดรถอัจฉริยะ โดยใช้
+            SSD MobileNet ในการตรวจจับรถ และผ่านการสอบ ITPE ระดับ IP
           </Typography>
           <Typography
             variant="body1"
@@ -285,10 +312,11 @@ function Profile() {
               lineHeight: 1.6,
             }}
           >
-            เพื่อพัฒนาเว็บไซต์ที่ทุกคนสามารถใช้งานและเข้าถึงได้
-            และองค์กันที่มุ่งเน้นการปฏิบัติงานด้วยประบวนการที่ยั่งยืนจะเป็นที่สนใจใน
-            React.js และการออกแบบนวัตกรรมใหม่ๆ
-            ที่ช่วยเพิ่มความสะดวกสบายในการใช้งานส่วนตัวผมเวลาว่างจะชอบหาข้อมูลและความรู้ใหม่เพราะว่าการพบเจอความรู้ใหม่มันคือความท้าทายที่จะพัฒนาตนเอง
+            ผมมุ่งมั่นเรียนรู้เทคโนโลยีใหม่ ๆ
+            อยู่เสมอและพร้อมที่จะนำความรู้ไปสร้างระบบ AI
+            ที่มีประสิทธิภาพและตอบโจทย์การใช้งานจริง
+            ผมกำลังมองหาโอกาสร่วมงานกับบริษัทที่ให้ความสำคัญกับ นวัตกรรม AI
+            และการพัฒนาอย่างต่อเนื่อง
           </Typography>
 
           {/* Download Resume Button and Social Icons - Centered */}
@@ -302,6 +330,10 @@ function Profile() {
             }}
           >
             <Button
+              component="a"
+              href="https://drive.google.com/file/d/1QSqDnm8mxiFKDWB9Rf0Rh4VCLEYnA7we/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="contained"
               sx={{
                 backgroundColor: "#c9e265",
@@ -327,42 +359,6 @@ function Profile() {
                 }}
               />
             </Button>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222222",
-                borderRadius: "50%",
-                width: 45,
-                height: 45,
-                "&:hover": {
-                  backgroundColor: "#333333",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              <LinkedInIcon sx={{ color: "#FFF" }} />
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#222222",
-                borderRadius: "50%",
-                width: 45,
-                height: 45,
-                "&:hover": {
-                  backgroundColor: "#333333",
-                  cursor: "pointer",
-                },
-              }}
-            >
-              <GitHubIcon sx={{ color: "#FFF" }} />
-            </Box>
           </Box>
         </Box>
 
@@ -459,7 +455,6 @@ function Profile() {
         </Box>
       </Box>
       <Divider sx={{ backgroundColor: "#444", my: 3 }} />
-
       {/* Capabilities Section */}
       <Box
         sx={{
@@ -470,6 +465,7 @@ function Profile() {
       >
         {/* Section Title and Description in a flex container */}
         <Box
+          id="capabilities"
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
@@ -504,8 +500,11 @@ function Profile() {
               flexBasis: { md: "55%" },
             }}
           >
-            ความสามารถการในใช้เทคโนโลยีในขั้นพื้นฐานที่พัฒนาหาความรู้ใหม่เสมอ
-            สร้างและเข้าร่วมสังคมของผู้พัฒนาเพื่อเพิ่มเติมความรู้
+            สามารถใช้งานเครื่องมือและเทคโนโลยีพัฒนาโปรแกรมได้อย่างมั่นใจ
+            และพร้อมเรียนรู้สิ่งใหม่ ๆรวมถึงเข้าร่วมและแลกเปลี่ยนความรู้ใน
+            ชุมชนผู้พัฒนา AI เพื่อต่อยอดทักษะอย่างต่อเนื่องสนใจด้าน AI, Machine
+            Learning, Computer Vision และการพัฒนาเว็บ/ซอฟต์แวร์
+            ทำงานร่วมกับทีมได้ดี พร้อมปรับตัวเข้ากับเทคโนโลยีและแนวทางใหม่ ๆ
           </Typography>
         </Box>
 
@@ -595,6 +594,22 @@ function Profile() {
             >
               DART
             </Button>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#111111",
+                color: "#FFFFFF",
+                borderRadius: "50px",
+                px: 4,
+                py: 1.5,
+                minWidth: "120px",
+                "&:hover": {
+                  backgroundColor: "#222222",
+                },
+              }}
+            >
+              Linux
+            </Button>
           </Box>
 
           {/* Skills Tags - Second Row */}
@@ -607,7 +622,7 @@ function Profile() {
               width: { xs: "100%", md: "auto" },
             }}
           >
-             <Button
+            <Button
               variant="contained"
               sx={{
                 backgroundColor: "#111111",
@@ -671,14 +686,31 @@ function Profile() {
                 },
               }}
             >
-              DATABASE
+              SQL
+            </Button>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#111111",
+                color: "#FFFFFF",
+                borderRadius: "50px",
+                px: 4,
+                py: 1.5,
+                minWidth: "120px",
+                "&:hover": {
+                  backgroundColor: "#222222",
+                },
+              }}
+            >
+              C++
             </Button>
           </Box>
         </Box>
       </Box>
       <Divider sx={{ backgroundColor: "#444", my: 3 }} />
-
+      C++
       <Box
+        id="experience"
         sx={{
           px: { xs: 2, sm: 4, md: 8, lg: 16 },
           py: { xs: 6, md: 10 },
@@ -774,6 +806,7 @@ function Profile() {
       </Box>
       <Divider sx={{ backgroundColor: "#444", my: 4 }} />
       <Box
+        id="contact"
         sx={{
           px: { xs: 2, sm: 4, md: 8, lg: 16 },
           py: { xs: 6, md: 10 },
@@ -813,7 +846,7 @@ function Profile() {
               flex: 1,
               display: "flex",
               flexDirection: "column",
-              justifyContent: "flex-start",
+              justifyContent: "center",
             }}
           >
             <Typography
@@ -851,7 +884,8 @@ function Profile() {
               For more info, here's my{" "}
               <Box
                 component="a"
-                href="#"
+                href="https://drive.google.com/file/d/1QSqDnm8mxiFKDWB9Rf0Rh4VCLEYnA7we/view?usp=sharing"
+                target="_blank"
                 sx={{
                   color: "#c9e265",
                   textDecoration: "none",
@@ -872,33 +906,10 @@ function Profile() {
                 mb: 5,
               }}
             >
-              {/* LinkedIn Icon */}
-              <Box
-                component="a"
-                href="#"
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: 40,
-                  height: 40,
-                  borderRadius: "50%",
-                  backgroundColor: "rgba(201, 226, 101, 0.1)",
-                  color: "#c9e265",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    backgroundColor: "rgba(201, 226, 101, 0.2)",
-                    transform: "translateY(-3px)",
-                  },
-                }}
-              >
-                <LinkedInIcon />
-              </Box>
-
               {/* GitHub Icon */}
               <Box
                 component="a"
-                href="#"
+                href="https://github.com/Chattanon"
                 sx={{
                   display: "flex",
                   justifyContent: "center",
@@ -918,10 +929,11 @@ function Profile() {
                 <GitHubIcon />
               </Box>
 
-              {/* Twitter/X Icon (Use a Twitter icon here) */}
+              {/*line */}
               <Box
                 component="a"
-                href="#"
+                href="https://line.me/ti/p/few11579"
+                target="_blank"
                 sx={{
                   display: "flex",
                   justifyContent: "center",
@@ -938,13 +950,14 @@ function Profile() {
                   },
                 }}
               >
-                <XIcon />
+                <FontAwesomeIcon icon={faLine} size="lg" />
               </Box>
 
               {/* Instagram Icon (Use an Instagram icon here) */}
               <Box
                 component="a"
-                href="#"
+                href="https://www.instagram.com/ctn_few/?hl=th"
+                target="_blank"
                 sx={{
                   display: "flex",
                   justifyContent: "center",
@@ -977,137 +990,7 @@ function Profile() {
             </Typography>
           </Box>
 
-          {/* Right Side - Contact Form */}
-          <Box
-            component="form"
-            sx={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 3,
-            }}
-          >
-            {/* Name Input */}
-            <TextField
-              fullWidth
-              label="Name"
-              variant="filled"
-              sx={{
-                "& .MuiFilledInput-root": {
-                  backgroundColor: "#111111",
-                  borderRadius: 1,
-                  "&:hover": {
-                    backgroundColor: "#222222",
-                  },
-                  "&.Mui-focused": {
-                    backgroundColor: "#222222",
-                  },
-                },
-                "& .MuiFormLabel-root": {
-                  color: "#777777",
-                },
-                "& .MuiInputBase-input": {
-                  color: "#FFFFFF",
-                },
-              }}
-            />
-
-            {/* Email Input */}
-            <TextField
-              fullWidth
-              label="Email"
-              variant="filled"
-              sx={{
-                "& .MuiFilledInput-root": {
-                  backgroundColor: "#111111",
-                  borderRadius: 1,
-                  "&:hover": {
-                    backgroundColor: "#222222",
-                  },
-                  "&.Mui-focused": {
-                    backgroundColor: "#222222",
-                  },
-                },
-                "& .MuiFormLabel-root": {
-                  color: "#777777",
-                },
-                "& .MuiInputBase-input": {
-                  color: "#FFFFFF",
-                },
-              }}
-            />
-
-            {/* Subject Input */}
-            <TextField
-              fullWidth
-              label="Subject"
-              variant="filled"
-              sx={{
-                "& .MuiFilledInput-root": {
-                  backgroundColor: "#111111",
-                  borderRadius: 1,
-                  "&:hover": {
-                    backgroundColor: "#222222",
-                  },
-                  "&.Mui-focused": {
-                    backgroundColor: "#222222",
-                  },
-                },
-                "& .MuiFormLabel-root": {
-                  color: "#777777",
-                },
-                "& .MuiInputBase-input": {
-                  color: "#FFFFFF",
-                },
-              }}
-            />
-
-            {/* Message Input */}
-            <TextField
-              fullWidth
-              label="Message"
-              variant="filled"
-              multiline
-              rows={6}
-              sx={{
-                "& .MuiFilledInput-root": {
-                  backgroundColor: "#111111",
-                  borderRadius: 1,
-                  "&:hover": {
-                    backgroundColor: "#222222",
-                  },
-                  "&.Mui-focused": {
-                    backgroundColor: "#222222",
-                  },
-                },
-                "& .MuiFormLabel-root": {
-                  color: "#777777",
-                },
-                "& .MuiInputBase-input": {
-                  color: "#FFFFFF",
-                },
-              }}
-            />
-
-            {/* Submit Button */}
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#c9e265",
-                color: "#000000",
-                fontWeight: "bold",
-                py: 1.5,
-                width: "20%",
-                alignSelf: "self-start",
-                borderRadius: "50px",
-                "&:hover": {
-                  backgroundColor: "#d9f568",
-                },
-              }}
-            >
-              SUBMIT
-            </Button>
-          </Box>
+         
         </Box>
       </Box>
     </Box>
