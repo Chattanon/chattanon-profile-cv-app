@@ -245,7 +245,7 @@ function Profile() {
           }}
         />
       </Box>
-      <Divider sx={{ backgroundColor: "#444", my: 3 }} />
+      {/* <Divider sx={{ backgroundColor: "#444", my: 3 }} /> */}
       {/* About Me Section - Modified to center content */}
       <Box
         id="about-me"
@@ -309,6 +309,18 @@ function Profile() {
             ที่มีประสิทธิภาพและตอบโจทย์การใช้งานจริง
             ผมกำลังมองหาโอกาสร่วมงานกับบริษัทที่ให้ความสำคัญกับ นวัตกรรม AI
             และการพัฒนาอย่างต่อเนื่อง
+          </Typography>
+          <Typography
+            variant="้h6"
+            sx={{
+              color: "#ffffffff",
+              mb: 4,
+              fontSize: { xs: "0.9rem", md: "1rem" },
+              lineHeight: 1.6,
+            }}
+          >
+            การศึกษาของผมจบปริญญาตรีจาก <br /> มหาวิทยาลัยเอเชียอาคเนย์
+            คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์ ด้วยเกรด 3.35
           </Typography>
 
           {/* Download Resume Button and Social Icons - Centered */}
@@ -446,7 +458,7 @@ function Profile() {
           </Box>
         </Box>
       </Box>
-      <Divider sx={{ backgroundColor: "#444", my: 3 }} />
+      {/* <Divider sx={{ backgroundColor: "#444", my: 3 }} /> */}
       {/* Capabilities Section */}
       <Box
         sx={{
@@ -699,8 +711,7 @@ function Profile() {
           </Box>
         </Box>
       </Box>
-      <Divider sx={{ backgroundColor: "#444", my: 3 }} />
-      C++
+
       <Box
         id="experience"
         sx={{
@@ -796,7 +807,208 @@ function Profile() {
           </Box>
         </Box>
       </Box>
-      <Divider sx={{ backgroundColor: "#444", my: 4 }} />
+      {/* project */}
+      <Box
+        sx={{
+          px: { xs: 2, sm: 4, md: 8, lg: 16 },
+          py: { xs: 6, md: 10 },
+          mt: { xs: 2, md: 4 },
+        }}
+      >
+        {/* cer */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "space-between",
+            alignItems: { xs: "flex-start", md: "flex-start" },
+            mb: 4,
+            mx: { xs: 2, sm: 4, md: 8, lg: 20 },
+          }}
+        >
+          {/* Left side - Title */}
+          <Typography
+            variant="h4"
+            sx={{
+              color: "#FFF",
+              fontSize: { xs: "1.5rem", md: "2rem" },
+              fontWeight: "bold",
+              mb: { xs: 2, md: 0 },
+              flexBasis: { md: "40%" },
+              textTransform: "uppercase",
+            }}
+          >
+            Project work
+          </Typography>
+
+          {/* Right side - Experience Info - MODIFIED HERE */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "start",
+              mb: 4,
+              mx: { xs: 2, sm: 4, md: 8, lg: 20 },
+            }}
+          >
+            {/* Job Title and Date on same line */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                justifyContent: "space-between",
+                alignItems: { xs: "flex-start", md: "flex-end" },
+                mb: 3,
+              }}
+            >
+              <Typography
+                variant="h5"
+                sx={{
+                  color: "#ffffff",
+                  fontSize: { xs: "1rem", md: "1rem" },
+                  textAlign: { xs: "left", md: "left" },
+                  lineHeight: 1.6,
+                  mr: 3,
+                }}
+              >
+                การบริหารจัดการที่จอดรถอัจฉริยะด้วยปัญญาประดิษฐ์
+                <br />
+                Intelligent Parking Management with Artificial Intelligent 
+
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#aaaaaa",
+                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  textAlign: { xs: "left", md: "right" },
+                  lineHeight: -100,
+                }}
+              >
+                 2024
+              </Typography>
+            </Box>
+
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#AAAAAA",
+                fontSize: { xs: "0.9rem", md: "1rem" },
+                textAlign: { xs: "left", md: "left" },
+                lineHeight: 1.6,
+                flexBasis: { md: "55%" },
+              }}
+            >
+              พัฒนา ระบบที่จอดรถอัจฉริยะ แบบ Edge AI ด้วย SSD MobileNet + OpenCV (Python) ตรวจจับรถและสถานะที่จอดแบบเรียลไทม์แสดงจำนวนที่ว่างผ่านแอปพลิเคชัน 
+
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          px: { xs: 2, sm: 4, md: 8, lg: 16 },
+          py: { xs: 6, md: 10 },
+          mt: { xs: 2, md: 4 },
+        }}
+      >
+        {/* cer */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "space-between",
+            alignItems: { xs: "flex-start", md: "flex-start" },
+            mb: 4,
+            mx: { xs: 2, sm: 4, md: 8, lg: 20 },
+          }}
+        >
+          {/* Left side - Title */}
+          <Typography
+            variant="h4"
+            sx={{
+              color: "#FFF",
+              fontSize: { xs: "1.5rem", md: "2rem" },
+              fontWeight: "bold",
+              mb: { xs: 2, md: 0 },
+              flexBasis: { md: "40%" },
+              textTransform: "uppercase",
+            }}
+          >
+            Certificate
+          </Typography>
+
+          {/* Right side - Experience Info - MODIFIED HERE */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "start",
+              mb: 4,
+              mx: { xs: 2, sm: 4, md: 8, lg: 20 },
+            }}
+          >
+            {/* Job Title and Date on same line */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                justifyContent: "space-between",
+                alignItems: { xs: "flex-start", md: "flex-end" },
+                mb: 3,
+              }}
+            >
+              <Typography
+                variant="h5"
+                sx={{
+                  color: "#ffffff",
+                  fontSize: { xs: "1rem", md: "1rem" },
+                  textAlign: { xs: "left", md: "left" },
+                  lineHeight: 1.6,
+                  mr: 3,
+                }}
+              >
+                IT PassportInformation Technology Passport Examination (ITPE)
+                ระดับ IP
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  color: "#aaaaaa",
+                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  textAlign: { xs: "left", md: "right" },
+                  lineHeight: 1.6,
+                }}
+              >
+                March 2024
+              </Typography>
+            </Box>
+
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#AAAAAA",
+                fontSize: { xs: "0.9rem", md: "1rem" },
+                textAlign: { xs: "left", md: "left" },
+                lineHeight: 1.6,
+                flexBasis: { md: "55%" },
+              }}
+            >
+              สำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ (สวทช.)
+              โดยสถาบันพัฒนาบุคลากรแห่งอนาคต (Career for the Future Academy)
+              ผู้ดำเนินการโครงการสอบมาตรฐานวิชาชีพไอที หรือ Information
+              Technology Professionals Examination: ITPE
+              ได้ร่วมมือกันระหว่างกลุ่มภาคี 7 ประเทศ คือ ญี่ปุ่น ฟิลิปปินส์
+              เวียดนาม พม่า มองโกเลีย บังคลาเทศ และไทย ภายใต้ชื่อ Information
+              Technology Professionals Examination Council: ITPEC
+              ซึ่งความร่วมมือดังกล่าวฯ
+              เป็นหนึ่งในมาตรฐานสากลที่ได้รับการยอมรับในระดับภูมิภาคๆ
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      {/* <Divider sx={{ backgroundColor: "#444", my: 4 }} /> */}
+
       <Box
         id="contact"
         sx={{
