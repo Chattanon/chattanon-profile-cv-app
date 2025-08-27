@@ -8,7 +8,7 @@ import {
   Divider,
   TextField,
 } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Analytics } from "@vercel/analytics/next"
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FalaFew from "../assets/A1FC69FC-98F1-4068-853E-5BD0D0B62BFD (1).jpg";
 import AboutMePhoto from "../assets/WDJ_0442.jpg";
