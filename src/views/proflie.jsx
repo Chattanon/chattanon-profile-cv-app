@@ -1138,7 +1138,7 @@ function Profile() {
               {/*line */}
               <Box
                 component="a"
-                href="https://line.me/ti/p/few11579"
+                href="https://line.me/ti/p/zDry0cx3As"
                 target="_blank"
                 sx={{
                   display: "flex",
